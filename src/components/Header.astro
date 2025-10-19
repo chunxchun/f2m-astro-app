@@ -5,16 +5,18 @@ import HeaderLink from "./HeaderLink.astro";
 
 <header>
   <nav>
-    <h2><a href="/">{SITE_TITLE}</a></h2>
+    <h2 class="text-gray-700 text-5xl font-bold">
+      <a href="/">&lt; F2M &sol;&gt;</a>
+    </h2>
     <div class="internal-links">
       <!-- <HeaderLink href="/">Home</HeaderLink> -->
       <HeaderLink href="/case-study">Case Study</HeaderLink>
-	  <HeaderLink href="/technology">Technology</HeaderLink>
+      <HeaderLink href="/technology">Technology</HeaderLink>
       <HeaderLink href="/about">About</HeaderLink>
     </div>
     <div class="social-links">
-      <a href="https://m.webtoo.ls/@astro" target="_blank">
-        <span class="sr-only">Follow Astro on Mastodon</span>
+      <a href="https://techhub.social/@f2m" target="_blank">
+        <span class="sr-only">Follow F2M on Mastodon</span>
         <svg viewBox="0 0 16 16" aria-hidden="true" width="32" height="32"
           ><path
             fill="currentColor"
@@ -48,7 +50,9 @@ import HeaderLink from "./HeaderLink.astro";
     margin: 0;
     padding: 0 1em;
     background: white;
-    box-shadow: 0 2px 8px rgba(var(--black), 5%), 0 1px 3px rgba(0, 0, 0, 0.1);
+    box-shadow:
+      0 2px 8px rgba(var(--black), 5%),
+      0 1px 3px rgba(0, 0, 0, 0.1);
     border-bottom: 1px solid #f3f4f6;
   }
   h2 {
