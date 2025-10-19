@@ -3,7 +3,8 @@
 	"type": "module",
 	"version": "0.0.1",
 	"scripts": {
-		"dev": "astro dev",
+		"dev": "astro dev --config astro.dev.config.mjs",
+		"dev:cf": "astro dev",
 		"build": "astro build",
 		"preview": "astro build && wrangler dev",
 		"astro": "astro",
