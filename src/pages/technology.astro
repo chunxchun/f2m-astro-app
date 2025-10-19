@@ -1,63 +1,238 @@
 ---
-import AboutHeroImage from '../assets/blog-placeholder-about.jpg';
-import Layout from '../layouts/BlogPost.astro';
+import BaseHead from "../components/BaseHead.astro";
+import Footer from "../components/Footer.astro";
+import { SITE_DESCRIPTION, SITE_TITLE } from "../consts";
+import MainLayout from "../layouts/Layout.astro";
 ---
 
-<Layout
-	title="Technology"
-	description="Lorem ipsum dolor sit amet"
-	pubDate={new Date('August 08 2021')}
-	heroImage={AboutHeroImage}
->
-	<p>
-		Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-		labore et dolore magna aliqua. Vitae ultricies leo integer malesuada nunc vel risus commodo
-		viverra. Adipiscing enim eu turpis egestas pretium. Euismod elementum nisi quis eleifend quam
-		adipiscing. In hac habitasse platea dictumst vestibulum. Sagittis purus sit amet volutpat. Netus
-		et malesuada fames ac turpis egestas. Eget magna fermentum iaculis eu non diam phasellus
-		vestibulum lorem. Varius sit amet mattis vulputate enim. Habitasse platea dictumst quisque
-		sagittis. Integer quis auctor elit sed vulputate mi. Dictumst quisque sagittis purus sit amet.
-	</p>
+<MainLayout>
+  <main>
+    <!-- Hero Section -->
+    <section class="h-screen bg-white flex flex-col justify-center items-center px-6">
+      <div class="max-w-4xl w-full text-center">
+        <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold text-black mb-6">
+          Technology
+        </h1>
+        <h2 class="text-xl md:text-2xl lg:text-3xl text-purple-600 mb-8">
+          Harnessing Modern, Proven Technologies
+        </h2>
+        <p class="text-lg md:text-xl lg:text-2xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+          We build robust, scalable, and future-ready solutions using industry-leading platforms and frameworks. Our technology stack is chosen for reliability, performance, and rapid innovation—empowering our team to deliver outstanding apps for diverse business needs.
+        </p>
+      </div>
+    </section>
 
-	<p>
-		Morbi tristique senectus et netus. Id semper risus in hendrerit gravida rutrum quisque non
-		tellus. Habitasse platea dictumst quisque sagittis purus sit amet. Tellus molestie nunc non
-		blandit massa. Cursus vitae congue mauris rhoncus. Accumsan tortor posuere ac ut. Fringilla urna
-		porttitor rhoncus dolor. Elit ullamcorper dignissim cras tincidunt lobortis. In cursus turpis
-		massa tincidunt dui ut ornare lectus. Integer feugiat scelerisque varius morbi enim nunc.
-		Bibendum neque egestas congue quisque egestas diam. Cras ornare arcu dui vivamus arcu felis
-		bibendum. Dignissim suspendisse in est ante in nibh mauris. Sed tempus urna et pharetra pharetra
-		massa massa ultricies mi.
-	</p>
+    <!-- Cloud & Edge Platforms Section -->
+    <section class="h-screen bg-gray-50 flex flex-col justify-center items-center px-6">
+      <div class="max-w-6xl w-full">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl md:text-5xl lg:text-6xl font-bold text-black mb-6">Cloud & Edge Platforms</h2>
+          <h3 class="text-xl md:text-2xl lg:text-3xl text-purple-600 mb-8">"Scalable Infrastructure for Global Reach"</h3>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div class="bg-white rounded-2xl p-8 shadow-lg border border-gray-200">
+            <div class="w-16 h-16 bg-yellow-400 rounded-2xl flex items-center justify-center mb-6">
+              <span class="text-3xl">🔥</span>
+            </div>
+            <h4 class="text-xl md:text-2xl font-bold text-black mb-4">Google Firebase</h4>
+            <p class="text-gray-600 leading-relaxed">
+              Fast deployment, real-time data, and serverless operations for rapid development and scaling.
+            </p>
+          </div>
+          
+          <div class="bg-white rounded-2xl p-8 shadow-lg border border-gray-200">
+            <div class="w-16 h-16 bg-purple-600 rounded-2xl flex items-center justify-center mb-6">
+              <span class="text-3xl">☁️</span>
+            </div>
+            <h4 class="text-xl md:text-2xl font-bold text-black mb-4">Amazon Web Services</h4>
+            <p class="text-gray-600 leading-relaxed">
+              Elastic cloud computing and enterprise-grade hosting for mission-critical applications.
+            </p>
+          </div>
+          
+          <div class="bg-white rounded-2xl p-8 shadow-lg border border-gray-200">
+            <div class="w-16 h-16 bg-yellow-400 rounded-2xl flex items-center justify-center mb-6">
+              <span class="text-3xl">🌐</span>
+            </div>
+            <h4 class="text-xl md:text-2xl font-bold text-black mb-4">Google Cloud Platform</h4>
+            <p class="text-gray-600 leading-relaxed">
+              Reliable cloud infrastructure with seamless integrations and enterprise-grade reliability.
+            </p>
+          </div>
+          
+          <div class="bg-white rounded-2xl p-8 shadow-lg border border-gray-200">
+            <div class="w-16 h-16 bg-purple-600 rounded-2xl flex items-center justify-center mb-6">
+              <span class="text-3xl">🤖</span>
+            </div>
+            <h4 class="text-xl md:text-2xl font-bold text-black mb-4">Microsoft Azure AI</h4>
+            <p class="text-gray-600 leading-relaxed">
+              Advanced, AI-powered image analysis and machine learning capabilities.
+            </p>
+          </div>
+          
+          <div class="bg-white rounded-2xl p-8 shadow-lg border border-gray-200">
+            <div class="w-16 h-16 bg-yellow-400 rounded-2xl flex items-center justify-center mb-6">
+              <span class="text-3xl">⚡</span>
+            </div>
+            <h4 class="text-xl md:text-2xl font-bold text-black mb-4">Cloudflare Workers</h4>
+            <p class="text-gray-600 leading-relaxed">
+              Serverless functions and APIs, instantly deployed across the globe for ultra-low latency.
+            </p>
+          </div>
+          
+          <div class="bg-white rounded-2xl p-8 shadow-lg border border-gray-200">
+            <div class="w-16 h-16 bg-purple-600 rounded-2xl flex items-center justify-center mb-6">
+              <span class="text-3xl">💾</span>
+            </div>
+            <h4 class="text-xl md:text-2xl font-bold text-black mb-4">Cloudflare R2</h4>
+            <p class="text-gray-600 leading-relaxed">
+              Zero-egress object storage—cost-effective and accessible storage for static assets.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-	<p>
-		Mollis nunc sed id semper risus in. Convallis a cras semper auctor neque. Diam sit amet nisl
-		suscipit. Lacus viverra vitae congue eu consequat ac felis donec. Egestas integer eget aliquet
-		nibh praesent tristique magna sit amet. Eget magna fermentum iaculis eu non diam. In vitae
-		turpis massa sed elementum. Tristique et egestas quis ipsum suspendisse ultrices. Eget lorem
-		dolor sed viverra ipsum. Vel turpis nunc eget lorem dolor sed viverra. Posuere ac ut consequat
-		semper viverra nam. Laoreet suspendisse interdum consectetur libero id faucibus. Diam phasellus
-		vestibulum lorem sed risus ultricies tristique. Rhoncus dolor purus non enim praesent elementum
-		facilisis. Ultrices tincidunt arcu non sodales neque. Tempus egestas sed sed risus pretium quam
-		vulputate. Viverra suspendisse potenti nullam ac tortor vitae purus faucibus ornare. Fringilla
-		urna porttitor rhoncus dolor purus non. Amet dictum sit amet justo donec enim.
-	</p>
+    <!-- Frontend Section -->
+    <section class="h-screen bg-white flex flex-col justify-center items-center px-6">
+      <div class="max-w-6xl w-full">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl md:text-5xl lg:text-6xl font-bold text-black mb-6">Frontend</h2>
+          <h3 class="text-xl md:text-2xl lg:text-3xl text-purple-600 mb-8">"Modern, Responsive User Experiences"</h3>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div class="bg-gray-50 rounded-2xl p-8 shadow-lg border border-gray-200">
+            <div class="w-16 h-16 bg-yellow-400 rounded-2xl flex items-center justify-center mb-6">
+              <span class="text-3xl">⚛️</span>
+            </div>
+            <h4 class="text-xl md:text-2xl font-bold text-black mb-4">React & Next.js</h4>
+            <p class="text-gray-600 leading-relaxed">
+              Responsive, component-driven UIs with seamless navigation and lightning-fast user experiences.
+            </p>
+          </div>
+          
+          <div class="bg-gray-50 rounded-2xl p-8 shadow-lg border border-gray-200">
+            <div class="w-16 h-16 bg-purple-600 rounded-2xl flex items-center justify-center mb-6">
+              <span class="text-3xl">📊</span>
+            </div>
+            <h4 class="text-xl md:text-2xl font-bold text-black mb-4">TanStack</h4>
+            <p class="text-gray-600 leading-relaxed">
+              State management and data fetching for complex applications with backendless data capabilities.
+            </p>
+          </div>
+          
+          <div class="bg-gray-50 rounded-2xl p-8 shadow-lg border border-gray-200">
+            <div class="w-16 h-16 bg-yellow-400 rounded-2xl flex items-center justify-center mb-6">
+              <span class="text-3xl">🎨</span>
+            </div>
+            <h4 class="text-xl md:text-2xl font-bold text-black mb-4">Shadcn & Vite</h4>
+            <p class="text-gray-600 leading-relaxed">
+              Modern UI components and fast development tooling for accelerated development and optimized builds.
+            </p>
+          </div>
+          
+          <div class="bg-gray-50 rounded-2xl p-8 shadow-lg border border-gray-200">
+            <div class="w-16 h-16 bg-purple-600 rounded-2xl flex items-center justify-center mb-6">
+              <span class="text-3xl">🌐</span>
+            </div>
+            <h4 class="text-xl md:text-2xl font-bold text-black mb-4">JavaScript, HTML, CSS</h4>
+            <p class="text-gray-600 leading-relaxed">
+              The foundation for interactive, accessible web experiences with industry standards.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-	<p>
-		Mattis ullamcorper velit sed ullamcorper morbi tincidunt. Tortor posuere ac ut consequat semper
-		viverra. Tellus mauris a diam maecenas sed enim ut sem viverra. Venenatis urna cursus eget nunc
-		scelerisque viverra mauris in. Arcu ac tortor dignissim convallis aenean et tortor at. Curabitur
-		gravida arcu ac tortor dignissim convallis aenean et tortor. Egestas tellus rutrum tellus
-		pellentesque eu. Fusce ut placerat orci nulla pellentesque dignissim enim sit amet. Ut enim
-		blandit volutpat maecenas volutpat blandit aliquam etiam. Id donec ultrices tincidunt arcu. Id
-		cursus metus aliquam eleifend mi.
-	</p>
+    <!-- Backend & Data Section -->
+    <section class="h-screen bg-gray-50 flex flex-col justify-center items-center px-6">
+      <div class="max-w-6xl w-full">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl md:text-5xl lg:text-6xl font-bold text-black mb-6">Backend & Data</h2>
+          <h3 class="text-xl md:text-2xl lg:text-3xl text-purple-600 mb-8">"Robust Data Management Solutions"</h3>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+          <div class="bg-white rounded-2xl p-8 shadow-lg border border-gray-200">
+            <div class="w-16 h-16 bg-yellow-400 rounded-2xl flex items-center justify-center mb-6">
+              <span class="text-3xl">🐘</span>
+            </div>
+            <h4 class="text-2xl md:text-3xl font-bold text-black mb-6">PostgreSQL</h4>
+            <p class="text-lg text-gray-600 leading-relaxed mb-6">
+              Robust, secure, and scalable relational database management system for enterprise applications.
+            </p>
+            <ul class="text-gray-600 space-y-3">
+              <li class="flex items-center">
+                <span class="w-2 h-2 bg-yellow-400 rounded-full mr-3"></span>
+                ACID compliance for data integrity
+              </li>
+              <li class="flex items-center">
+                <span class="w-2 h-2 bg-yellow-400 rounded-full mr-3"></span>
+                Advanced indexing and query optimization
+              </li>
+              <li class="flex items-center">
+                <span class="w-2 h-2 bg-yellow-400 rounded-full mr-3"></span>
+                Extensible with custom functions and types
+              </li>
+            </ul>
+          </div>
+          
+          <div class="bg-white rounded-2xl p-8 shadow-lg border border-gray-200">
+            <div class="w-16 h-16 bg-purple-600 rounded-2xl flex items-center justify-center mb-6">
+              <span class="text-3xl">🗃️</span>
+            </div>
+            <h4 class="text-2xl md:text-3xl font-bold text-black mb-6">SQLite</h4>
+            <p class="text-lg text-gray-600 leading-relaxed mb-6">
+              Lightweight and efficient database for mobile applications, embedded systems, and rapid prototyping.
+            </p>
+            <ul class="text-gray-600 space-y-3">
+              <li class="flex items-center">
+                <span class="w-2 h-2 bg-purple-600 rounded-full mr-3"></span>
+                Zero-configuration database engine
+              </li>
+              <li class="flex items-center">
+                <span class="w-2 h-2 bg-purple-600 rounded-full mr-3"></span>
+                Cross-platform compatibility
+              </li>
+              <li class="flex items-center">
+                <span class="w-2 h-2 bg-purple-600 rounded-full mr-3"></span>
+                Perfect for development and testing
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
 
-	<p>
-		Tempus quam pellentesque nec nam aliquam sem. Risus at ultrices mi tempus imperdiet. Id porta
-		nibh venenatis cras sed felis eget velit. Ipsum a arcu cursus vitae. Facilisis magna etiam
-		tempor orci eu lobortis elementum. Tincidunt dui ut ornare lectus sit. Quisque non tellus orci
-		ac. Blandit libero volutpat sed cras. Nec tincidunt praesent semper feugiat nibh sed pulvinar
-		proin gravida. Egestas integer eget aliquet nibh praesent tristique magna.
-	</p>
-</Layout>
+    <!-- CTA Section -->
+    <section class="h-screen bg-white flex flex-col justify-center items-center px-6">
+      <div class="max-w-4xl w-full text-center">
+        <h2 class="text-4xl md:text-5xl lg:text-6xl font-bold text-black mb-6">Ready to Build?</h2>
+        <h3 class="text-xl md:text-2xl lg:text-3xl text-purple-600 mb-8">"Let's Create Something Amazing Together"</h3>
+        <p class="text-lg md:text-xl lg:text-2xl text-gray-600 max-w-3xl mx-auto leading-relaxed mb-12">
+          Our technology stack is designed for innovation, scalability, and reliability. 
+          Ready to bring your ideas to life with cutting-edge solutions?
+        </p>
+        
+        <div class="flex flex-col sm:flex-row gap-6 justify-center items-center">
+          <a href="/contact" class="bg-purple-600 hover:bg-purple-700 text-white px-8 py-4 rounded-2xl font-semibold text-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
+            Start Your Project
+          </a>
+          <a href="/about" class="bg-transparent hover:bg-purple-600 text-purple-600 hover:text-white border-2 border-purple-600 px-8 py-4 rounded-2xl font-semibold text-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
+            Learn More About Us
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</MainLayout>
+
+<html lang="en">
+  <head>
+    <BaseHead title={`Technology - ${SITE_TITLE}`} description={SITE_DESCRIPTION} />
+  </head>
+  <body> </body>
+</html>
