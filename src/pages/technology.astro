@@ -1,350 +1,238 @@
 ---
-import AboutHeroImage from "../assets/blog-placeholder-about.jpg";
-// import Layout from "../layouts/BlogPost.astro";
-import Layout from "../layouts/Layout.astro";
-import Technology3DMarquee from "@/components/Technology3DMarquee";
-import {
-  Card,
-  CardAction,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
+import BaseHead from "../components/BaseHead.astro";
+import Footer from "../components/Footer.astro";
+import { SITE_DESCRIPTION, SITE_TITLE } from "../consts";
+import MainLayout from "../layouts/Layout.astro";
 ---
 
-<!-- title="Technology"
-  description="Explore our modern technology stack and proven frameworks for building robust, scalable applications."
-  pubDate={new Date("August 08 2021")}
-  heroImage={AboutHeroImage} -->
-<Layout>
-  <!-- <Technology3DMarquee /> -->
-
-  <!-- Hero Section -->
-  <div class="tech-hero">
-    <h1 class="tech-title">Technology</h1>
-    <h2 class="underline decoration-yellow-500">Harnessing Modern, Proven Technologies</h2>
-    <p class="tech-description">
-      We build robust, scalable, and future-ready solutions using
-      industry-leading platforms and frameworks. Our technology stack is chosen
-      for reliability, performance, and rapid innovation—empowering our team to
-      deliver outstanding apps for diverse business needs.
-    </p>
-  </div>
-
-  <!-- Technology Sections -->
-  <div class="tech-sections">
-    <!-- Cloud & Infrastructure -->
-    <section class="tech-section">
-      <h3 class="section-title">Cloud & Infrastructure</h3>
-      <div class="tech-grid">
-        <Card className="w-full max-w-sm">
-          <CardHeader>
-            <CardTitle>Google Firebase</CardTitle>
-          </CardHeader>
-          <CardContent>
-            <p>Fast deployment, real-time data, and serverless operations.</p>
-          </CardContent>
-        </Card>
-         <Card className="w-full max-w-sm">
-           <CardHeader>
-             <CardTitle>Amazon Web Services (AWS)</CardTitle>
-           </CardHeader>
-           <CardContent>
-             <p>Elastic cloud computing and enterprise-grade hosting.</p>
-           </CardContent>
-         </Card>
-         <Card className="w-full max-w-sm">
-           <CardHeader>
-             <CardTitle>Google Cloud Platform</CardTitle>
-           </CardHeader>
-           <CardContent>
-             <p>Reliable cloud infrastructure with seamless integrations.</p>
-           </CardContent>
-         </Card>
-         <Card className="w-full max-w-sm">
-           <CardHeader>
-             <CardTitle>Microsoft Azure AI Vision</CardTitle>
-           </CardHeader>
-           <CardContent>
-             <p>Advanced, AI-powered image analysis.</p>
-           </CardContent>
-         </Card>
-         <Card className="w-full max-w-sm">
-           <CardHeader>
-             <CardTitle>Cloudflare Workers</CardTitle>
-           </CardHeader>
-           <CardContent>
-             <p>Serverless functions and APIs, instantly deployed across the globe for ultra-low latency and high reliability.</p>
-           </CardContent>
-         </Card>
-         <Card className="w-full max-w-sm">
-           <CardHeader>
-             <CardTitle>Cloudflare D1</CardTitle>
-           </CardHeader>
-           <CardContent>
-             <p>Scalable, serverless SQL database for lightning-fast, globally accessible queries.</p>
-           </CardContent>
-         </Card>
-         <Card className="w-full max-w-sm">
-           <CardHeader>
-             <CardTitle>Cloudflare R2</CardTitle>
-           </CardHeader>
-           <CardContent>
-             <p>Zero-egress object storage—cost-effective and accessible storage for static assets and application data.</p>
-           </CardContent>
-         </Card>
+<MainLayout>
+  <main>
+    <!-- Hero Section -->
+    <section class="h-screen bg-white flex flex-col justify-center items-center px-6">
+      <div class="max-w-4xl w-full text-center">
+        <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold text-black mb-6">
+          Technology
+        </h1>
+        <h2 class="text-xl md:text-2xl lg:text-3xl text-purple-600 mb-8">
+          Harnessing Modern, Proven Technologies
+        </h2>
+        <p class="text-lg md:text-xl lg:text-2xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+          We build robust, scalable, and future-ready solutions using industry-leading platforms and frameworks. Our technology stack is chosen for reliability, performance, and rapid innovation—empowering our team to deliver outstanding apps for diverse business needs.
+        </p>
       </div>
     </section>
 
-    <!-- Frontend -->
-    <section class="tech-section">
-      <h3 class="section-title">Frontend</h3>
-      <div class="tech-grid">
-         <Card className="w-full max-w-sm">
-           <CardHeader>
-             <CardTitle>React & Next.js</CardTitle>
-           </CardHeader>
-           <CardContent>
-             <p>Responsive, component-driven UIs with seamless navigation.</p>
-           </CardContent>
-         </Card>
-         <Card className="w-full max-w-sm">
-           <CardHeader>
-             <CardTitle>TanStack</CardTitle>
-           </CardHeader>
-           <CardContent>
-             <p>State management and data fetching for complex applications.</p>
-           </CardContent>
-         </Card>
-         <Card className="w-full max-w-sm">
-           <CardHeader>
-             <CardTitle>Shadcn & Vite</CardTitle>
-           </CardHeader>
-           <CardContent>
-             <p>Modern UI components and fast development tooling.</p>
-           </CardContent>
-         </Card>
-         <Card className="w-full max-w-sm">
-           <CardHeader>
-             <CardTitle>JavaScript, HTML, CSS</CardTitle>
-           </CardHeader>
-           <CardContent>
-             <p>The foundation for interactive, accessible web experiences.</p>
-           </CardContent>
-         </Card>
+    <!-- Cloud & Edge Platforms Section -->
+    <section class="h-screen bg-gray-50 flex flex-col justify-center items-center px-6">
+      <div class="max-w-6xl w-full">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl md:text-5xl lg:text-6xl font-bold text-black mb-6">Cloud & Edge Platforms</h2>
+          <h3 class="text-xl md:text-2xl lg:text-3xl text-purple-600 mb-8">"Scalable Infrastructure for Global Reach"</h3>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div class="bg-white rounded-2xl p-8 shadow-lg border border-gray-200">
+            <div class="w-16 h-16 bg-yellow-400 rounded-2xl flex items-center justify-center mb-6">
+              <span class="text-3xl">🔥</span>
+            </div>
+            <h4 class="text-xl md:text-2xl font-bold text-black mb-4">Google Firebase</h4>
+            <p class="text-gray-600 leading-relaxed">
+              Fast deployment, real-time data, and serverless operations for rapid development and scaling.
+            </p>
+          </div>
+          
+          <div class="bg-white rounded-2xl p-8 shadow-lg border border-gray-200">
+            <div class="w-16 h-16 bg-purple-600 rounded-2xl flex items-center justify-center mb-6">
+              <span class="text-3xl">☁️</span>
+            </div>
+            <h4 class="text-xl md:text-2xl font-bold text-black mb-4">Amazon Web Services</h4>
+            <p class="text-gray-600 leading-relaxed">
+              Elastic cloud computing and enterprise-grade hosting for mission-critical applications.
+            </p>
+          </div>
+          
+          <div class="bg-white rounded-2xl p-8 shadow-lg border border-gray-200">
+            <div class="w-16 h-16 bg-yellow-400 rounded-2xl flex items-center justify-center mb-6">
+              <span class="text-3xl">🌐</span>
+            </div>
+            <h4 class="text-xl md:text-2xl font-bold text-black mb-4">Google Cloud Platform</h4>
+            <p class="text-gray-600 leading-relaxed">
+              Reliable cloud infrastructure with seamless integrations and enterprise-grade reliability.
+            </p>
+          </div>
+          
+          <div class="bg-white rounded-2xl p-8 shadow-lg border border-gray-200">
+            <div class="w-16 h-16 bg-purple-600 rounded-2xl flex items-center justify-center mb-6">
+              <span class="text-3xl">🤖</span>
+            </div>
+            <h4 class="text-xl md:text-2xl font-bold text-black mb-4">Microsoft Azure AI</h4>
+            <p class="text-gray-600 leading-relaxed">
+              Advanced, AI-powered image analysis and machine learning capabilities.
+            </p>
+          </div>
+          
+          <div class="bg-white rounded-2xl p-8 shadow-lg border border-gray-200">
+            <div class="w-16 h-16 bg-yellow-400 rounded-2xl flex items-center justify-center mb-6">
+              <span class="text-3xl">⚡</span>
+            </div>
+            <h4 class="text-xl md:text-2xl font-bold text-black mb-4">Cloudflare Workers</h4>
+            <p class="text-gray-600 leading-relaxed">
+              Serverless functions and APIs, instantly deployed across the globe for ultra-low latency.
+            </p>
+          </div>
+          
+          <div class="bg-white rounded-2xl p-8 shadow-lg border border-gray-200">
+            <div class="w-16 h-16 bg-purple-600 rounded-2xl flex items-center justify-center mb-6">
+              <span class="text-3xl">💾</span>
+            </div>
+            <h4 class="text-xl md:text-2xl font-bold text-black mb-4">Cloudflare R2</h4>
+            <p class="text-gray-600 leading-relaxed">
+              Zero-egress object storage—cost-effective and accessible storage for static assets.
+            </p>
+          </div>
+        </div>
       </div>
     </section>
 
-    <!-- Backend & Data -->
-    <section class="tech-section">
-      <h3 class="section-title">Backend & Data</h3>
-      <div class="tech-grid">
-         <Card className="w-full max-w-sm">
-           <CardHeader>
-             <CardTitle>PostgreSQL</CardTitle>
-           </CardHeader>
-           <CardContent>
-             <p>Robust, secure, and scalable relational database.</p>
-           </CardContent>
-         </Card>
-         <Card className="w-full max-w-sm">
-           <CardHeader>
-             <CardTitle>SQLite</CardTitle>
-           </CardHeader>
-           <CardContent>
-             <p>Lightweight and efficient database for mobile and embedded use.</p>
-           </CardContent>
-         </Card>
+    <!-- Frontend Section -->
+    <section class="h-screen bg-white flex flex-col justify-center items-center px-6">
+      <div class="max-w-6xl w-full">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl md:text-5xl lg:text-6xl font-bold text-black mb-6">Frontend</h2>
+          <h3 class="text-xl md:text-2xl lg:text-3xl text-purple-600 mb-8">"Modern, Responsive User Experiences"</h3>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div class="bg-gray-50 rounded-2xl p-8 shadow-lg border border-gray-200">
+            <div class="w-16 h-16 bg-yellow-400 rounded-2xl flex items-center justify-center mb-6">
+              <span class="text-3xl">⚛️</span>
+            </div>
+            <h4 class="text-xl md:text-2xl font-bold text-black mb-4">React & Next.js</h4>
+            <p class="text-gray-600 leading-relaxed">
+              Responsive, component-driven UIs with seamless navigation and lightning-fast user experiences.
+            </p>
+          </div>
+          
+          <div class="bg-gray-50 rounded-2xl p-8 shadow-lg border border-gray-200">
+            <div class="w-16 h-16 bg-purple-600 rounded-2xl flex items-center justify-center mb-6">
+              <span class="text-3xl">📊</span>
+            </div>
+            <h4 class="text-xl md:text-2xl font-bold text-black mb-4">TanStack</h4>
+            <p class="text-gray-600 leading-relaxed">
+              State management and data fetching for complex applications with backendless data capabilities.
+            </p>
+          </div>
+          
+          <div class="bg-gray-50 rounded-2xl p-8 shadow-lg border border-gray-200">
+            <div class="w-16 h-16 bg-yellow-400 rounded-2xl flex items-center justify-center mb-6">
+              <span class="text-3xl">🎨</span>
+            </div>
+            <h4 class="text-xl md:text-2xl font-bold text-black mb-4">Shadcn & Vite</h4>
+            <p class="text-gray-600 leading-relaxed">
+              Modern UI components and fast development tooling for accelerated development and optimized builds.
+            </p>
+          </div>
+          
+          <div class="bg-gray-50 rounded-2xl p-8 shadow-lg border border-gray-200">
+            <div class="w-16 h-16 bg-purple-600 rounded-2xl flex items-center justify-center mb-6">
+              <span class="text-3xl">🌐</span>
+            </div>
+            <h4 class="text-xl md:text-2xl font-bold text-black mb-4">JavaScript, HTML, CSS</h4>
+            <p class="text-gray-600 leading-relaxed">
+              The foundation for interactive, accessible web experiences with industry standards.
+            </p>
+          </div>
+        </div>
       </div>
     </section>
-  </div>
 
-  <style>
-    .tech-hero {
-      text-align: center;
-      margin: 4rem 0 6rem 0;
-      max-width: 800px;
-      margin-left: auto;
-      margin-right: auto;
-    }
+    <!-- Backend & Data Section -->
+    <section class="h-screen bg-gray-50 flex flex-col justify-center items-center px-6">
+      <div class="max-w-6xl w-full">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl md:text-5xl lg:text-6xl font-bold text-black mb-6">Backend & Data</h2>
+          <h3 class="text-xl md:text-2xl lg:text-3xl text-purple-600 mb-8">"Robust Data Management Solutions"</h3>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+          <div class="bg-white rounded-2xl p-8 shadow-lg border border-gray-200">
+            <div class="w-16 h-16 bg-yellow-400 rounded-2xl flex items-center justify-center mb-6">
+              <span class="text-3xl">🐘</span>
+            </div>
+            <h4 class="text-2xl md:text-3xl font-bold text-black mb-6">PostgreSQL</h4>
+            <p class="text-lg text-gray-600 leading-relaxed mb-6">
+              Robust, secure, and scalable relational database management system for enterprise applications.
+            </p>
+            <ul class="text-gray-600 space-y-3">
+              <li class="flex items-center">
+                <span class="w-2 h-2 bg-yellow-400 rounded-full mr-3"></span>
+                ACID compliance for data integrity
+              </li>
+              <li class="flex items-center">
+                <span class="w-2 h-2 bg-yellow-400 rounded-full mr-3"></span>
+                Advanced indexing and query optimization
+              </li>
+              <li class="flex items-center">
+                <span class="w-2 h-2 bg-yellow-400 rounded-full mr-3"></span>
+                Extensible with custom functions and types
+              </li>
+            </ul>
+          </div>
+          
+          <div class="bg-white rounded-2xl p-8 shadow-lg border border-gray-200">
+            <div class="w-16 h-16 bg-purple-600 rounded-2xl flex items-center justify-center mb-6">
+              <span class="text-3xl">🗃️</span>
+            </div>
+            <h4 class="text-2xl md:text-3xl font-bold text-black mb-6">SQLite</h4>
+            <p class="text-lg text-gray-600 leading-relaxed mb-6">
+              Lightweight and efficient database for mobile applications, embedded systems, and rapid prototyping.
+            </p>
+            <ul class="text-gray-600 space-y-3">
+              <li class="flex items-center">
+                <span class="w-2 h-2 bg-purple-600 rounded-full mr-3"></span>
+                Zero-configuration database engine
+              </li>
+              <li class="flex items-center">
+                <span class="w-2 h-2 bg-purple-600 rounded-full mr-3"></span>
+                Cross-platform compatibility
+              </li>
+              <li class="flex items-center">
+                <span class="w-2 h-2 bg-purple-600 rounded-full mr-3"></span>
+                Perfect for development and testing
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    .tech-title {
-      font-size: 3.5rem;
-      font-weight: 700;
-      color: #374151;
-      margin-bottom: 1rem;
-      line-height: 1.1;
-    }
+    <!-- CTA Section -->
+    <section class="h-screen bg-white flex flex-col justify-center items-center px-6">
+      <div class="max-w-4xl w-full text-center">
+        <h2 class="text-4xl md:text-5xl lg:text-6xl font-bold text-black mb-6">Ready to Build?</h2>
+        <h3 class="text-xl md:text-2xl lg:text-3xl text-purple-600 mb-8">"Let's Create Something Amazing Together"</h3>
+        <p class="text-lg md:text-xl lg:text-2xl text-gray-600 max-w-3xl mx-auto leading-relaxed mb-12">
+          Our technology stack is designed for innovation, scalability, and reliability. 
+          Ready to bring your ideas to life with cutting-edge solutions?
+        </p>
+        
+        <div class="flex flex-col sm:flex-row gap-6 justify-center items-center">
+          <a href="/contact" class="bg-purple-600 hover:bg-purple-700 text-white px-8 py-4 rounded-2xl font-semibold text-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
+            Start Your Project
+          </a>
+          <a href="/about" class="bg-transparent hover:bg-purple-600 text-purple-600 hover:text-white border-2 border-purple-600 px-8 py-4 rounded-2xl font-semibold text-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
+            Learn More About Us
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</MainLayout>
 
-    .tech-subtitle {
-      font-size: 1.5rem;
-      font-weight: 600;
-      color: rgb(var(--gray-dark));
-      margin-bottom: 2rem;
-      line-height: 1.3;
-    }
-
-    .tech-description {
-      font-size: 1.2rem;
-      line-height: 1.7;
-      color: rgb(var(--gray-dark));
-      margin: 0;
-    }
-
-    .tech-sections {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 2rem;
-    }
-
-    .tech-section {
-      margin-bottom: 4rem;
-    }
-
-    .section-title {
-      font-size: 2rem;
-      font-weight: 600;
-      color: rgb(var(--black));
-      margin-bottom: 2rem;
-      text-align: center;
-      position: relative;
-    }
-
-    .section-title::after {
-      content: "";
-      display: block;
-      width: 60px;
-      height: 3px;
-      background: linear-gradient(90deg, var(--accent), var(--accent-dark));
-      margin: 1rem auto 0;
-      border-radius: 2px;
-    }
-
-    .tech-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-      gap: 1.5rem;
-      margin-top: 2rem;
-    }
-
-    /* Card component styling */
-    .tech-grid [data-astro-cid] {
-      transition: all 0.3s ease;
-      border: 2px solid #e5e7eb;
-      background: white;
-    }
-
-    .tech-grid [data-astro-cid]:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 12px 35px rgba(251, 191, 36, 0.2);
-      border-color: #fbbf24;
-      background: linear-gradient(135deg, #fffbeb 0%, #fef3c7 100%);
-    }
-
-    /* Dark mode support for cards */
-    .dark .tech-section {
-      background: #1f2937;
-      border-color: #374151;
-    }
-
-    .dark .tech-hero {
-      background: linear-gradient(135deg, #374151 0%, #4b5563 100%);
-    }
-
-    .dark .tech-title {
-      color: #f9fafb;
-      background: linear-gradient(135deg, #f9fafb, #d1d5db);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-    }
-
-    .dark .tech-subtitle {
-      color: #f9fafb;
-    }
-
-    .dark .tech-description {
-      color: #d1d5db;
-    }
-
-    .dark .section-title {
-      color: #f9fafb;
-    }
-
-    .dark .tech-grid [data-astro-cid] {
-      border-color: #374151;
-      background: #1f2937;
-    }
-
-    .dark .tech-grid [data-astro-cid]:hover {
-      background: linear-gradient(135deg, #374151 0%, #4b5563 100%);
-      border-color: #fbbf24;
-      box-shadow: 0 12px 35px rgba(251, 191, 36, 0.3);
-    }
-
-    /* Responsive design */
-    @media (max-width: 768px) {
-      .tech-hero {
-        margin: 2rem 0 4rem 0;
-        padding: 2rem 1rem;
-      }
-
-      .tech-title {
-        font-size: 2.5rem;
-      }
-
-      .tech-subtitle {
-        font-size: 1.25rem;
-      }
-
-      .tech-description {
-        font-size: 1.1rem;
-      }
-
-      .tech-sections {
-        padding: 0 1rem;
-      }
-
-      .tech-section {
-        padding: 1.5rem;
-      }
-
-      .tech-grid {
-        grid-template-columns: 1fr;
-        gap: 1rem;
-      }
-
-      .section-title {
-        font-size: 1.75rem;
-      }
-    }
-
-    @media (max-width: 480px) {
-      .tech-hero {
-        padding: 1.5rem 1rem;
-      }
-
-      .tech-title {
-        font-size: 2rem;
-      }
-
-      .tech-subtitle {
-        font-size: 1.1rem;
-      }
-
-      .tech-description {
-        font-size: 1rem;
-      }
-
-      .section-title {
-        font-size: 1.5rem;
-      }
-
-      .tech-section {
-        padding: 1rem;
-      }
-    }
-  </style>
-</Layout>
+<html lang="en">
+  <head>
+    <BaseHead title={`Technology - ${SITE_TITLE}`} description={SITE_DESCRIPTION} />
+  </head>
+  <body> </body>
+</html>

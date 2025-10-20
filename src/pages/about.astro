@@ -1,63 +1,282 @@
 ---
-import AboutHeroImage from '../assets/blog-placeholder-about.jpg';
-import Layout from '../layouts/BlogPost.astro';
+import BaseHead from "../components/BaseHead.astro";
+import Footer from "../components/Footer.astro";
+import { SITE_DESCRIPTION, SITE_TITLE } from "../consts";
+import MainLayout from "../layouts/Layout.astro";
 ---
 
-<Layout
-	title="About Me"
-	description="Lorem ipsum dolor sit amet"
-	pubDate={new Date('August 08 2021')}
-	heroImage={AboutHeroImage}
->
-	<p>
-		Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-		labore et dolore magna aliqua. Vitae ultricies leo integer malesuada nunc vel risus commodo
-		viverra. Adipiscing enim eu turpis egestas pretium. Euismod elementum nisi quis eleifend quam
-		adipiscing. In hac habitasse platea dictumst vestibulum. Sagittis purus sit amet volutpat. Netus
-		et malesuada fames ac turpis egestas. Eget magna fermentum iaculis eu non diam phasellus
-		vestibulum lorem. Varius sit amet mattis vulputate enim. Habitasse platea dictumst quisque
-		sagittis. Integer quis auctor elit sed vulputate mi. Dictumst quisque sagittis purus sit amet.
-	</p>
+<MainLayout>
+  <main>
+    <!-- Hero Section -->
+    <section
+      class="h-screen bg-white flex flex-col justify-center items-center px-6"
+    >
+      <div class="max-w-4xl w-full text-center">
+        <h1
+          class="text-4xl md:text-6xl lg:text-7xl font-semibold text-black mb-6"
+        >
+          About <span
+            class="text-gray-300 font-light underline underline-offset-8 decoration-yellow-300"
+            >F2M</span
+          >
+        </h1>
+        <p
+          class="text-lg md:text-2xl lg:text-3xl text-gray-500 max-w-3xl mx-auto leading-relaxed"
+        >
+          A global collective of IT professionals united by innovation and open
+          source values
+        </p>
+      </div>
+    </section>
 
-	<p>
-		Morbi tristique senectus et netus. Id semper risus in hendrerit gravida rutrum quisque non
-		tellus. Habitasse platea dictumst quisque sagittis purus sit amet. Tellus molestie nunc non
-		blandit massa. Cursus vitae congue mauris rhoncus. Accumsan tortor posuere ac ut. Fringilla urna
-		porttitor rhoncus dolor. Elit ullamcorper dignissim cras tincidunt lobortis. In cursus turpis
-		massa tincidunt dui ut ornare lectus. Integer feugiat scelerisque varius morbi enim nunc.
-		Bibendum neque egestas congue quisque egestas diam. Cras ornare arcu dui vivamus arcu felis
-		bibendum. Dignissim suspendisse in est ante in nibh mauris. Sed tempus urna et pharetra pharetra
-		massa massa ultricies mi.
-	</p>
+    <!-- Our Story Section -->
+    <section
+      class="h-screen bg-gray-50 flex flex-col justify-center items-center px-6"
+    >
+      <div class="max-w-6xl w-full">
+        <div class="text-center mb-16">
+          <h2
+            class="text-4xl md:text-5xl lg:text-6xl font-bold text-black mb-6"
+          >
+            Our Story
+          </h2>
+          <h3 class="text-xl md:text-2xl lg:text-3xl text-gray-300 mb-8">
+            Born in Hong Kong, Thriving Globally
+          </h3>
+        </div>
 
-	<p>
-		Mollis nunc sed id semper risus in. Convallis a cras semper auctor neque. Diam sit amet nisl
-		suscipit. Lacus viverra vitae congue eu consequat ac felis donec. Egestas integer eget aliquet
-		nibh praesent tristique magna sit amet. Eget magna fermentum iaculis eu non diam. In vitae
-		turpis massa sed elementum. Tristique et egestas quis ipsum suspendisse ultrices. Eget lorem
-		dolor sed viverra ipsum. Vel turpis nunc eget lorem dolor sed viverra. Posuere ac ut consequat
-		semper viverra nam. Laoreet suspendisse interdum consectetur libero id faucibus. Diam phasellus
-		vestibulum lorem sed risus ultricies tristique. Rhoncus dolor purus non enim praesent elementum
-		facilisis. Ultrices tincidunt arcu non sodales neque. Tempus egestas sed sed risus pretium quam
-		vulputate. Viverra suspendisse potenti nullam ac tortor vitae purus faucibus ornare. Fringilla
-		urna porttitor rhoncus dolor purus non. Amet dictum sit amet justo donec enim.
-	</p>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+          <div>
+            <h4 class="text-2xl md:text-3xl font-bold text-black mb-6">
+              Global IT Collective
+            </h4>
+            <p class="text-lg text-gray-600 leading-relaxed mb-6">
+              F2M started in Hong Kong and quickly grew into a global collective
+              of IT innovators. What began as a small team soon became a
+              worldwide network, bringing together bright minds from every
+              corner of the planet. We’re proof that creativity and innovation
+              don’t need borders.
+            </p>
+            <p class="text-lg text-gray-600 leading-relaxed">
+              Our global team blends diverse perspectives, cultures, and tech
+              talent to build solutions that make an impact—anywhere and for
+              everyone.
+            </p>
+          </div>
 
-	<p>
-		Mattis ullamcorper velit sed ullamcorper morbi tincidunt. Tortor posuere ac ut consequat semper
-		viverra. Tellus mauris a diam maecenas sed enim ut sem viverra. Venenatis urna cursus eget nunc
-		scelerisque viverra mauris in. Arcu ac tortor dignissim convallis aenean et tortor at. Curabitur
-		gravida arcu ac tortor dignissim convallis aenean et tortor. Egestas tellus rutrum tellus
-		pellentesque eu. Fusce ut placerat orci nulla pellentesque dignissim enim sit amet. Ut enim
-		blandit volutpat maecenas volutpat blandit aliquam etiam. Id donec ultrices tincidunt arcu. Id
-		cursus metus aliquam eleifend mi.
-	</p>
+          <div
+            class="bg-white rounded-2xl p-8 shadow-lg border border-gray-200"
+          >
+            <div
+              class="w-16 h-16 bg-yellow-400 rounded-2xl flex items-center justify-center mb-6"
+            >
+              <span class="text-3xl">🌍</span>
+            </div>
+            <h5 class="text-xl font-bold text-black mb-4">Worldwide Network</h5>
+            <p class="text-gray-600">
+              From Hong Kong to New York, London to Tokyo, our team spans
+              continents and time zones, bringing 24/7 innovation to every
+              project.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-	<p>
-		Tempus quam pellentesque nec nam aliquam sem. Risus at ultrices mi tempus imperdiet. Id porta
-		nibh venenatis cras sed felis eget velit. Ipsum a arcu cursus vitae. Facilisis magna etiam
-		tempor orci eu lobortis elementum. Tincidunt dui ut ornare lectus sit. Quisque non tellus orci
-		ac. Blandit libero volutpat sed cras. Nec tincidunt praesent semper feugiat nibh sed pulvinar
-		proin gravida. Egestas integer eget aliquet nibh praesent tristique magna.
-	</p>
-</Layout>
+    <!-- Our Approach Section -->
+    <section
+      class="h-screen bg-white flex flex-col justify-center items-center px-6"
+    >
+      <div class="max-w-6xl w-full">
+        <div class="text-center mb-16">
+          <h2
+            class="text-4xl md:text-5xl lg:text-6xl font-bold text-black mb-6"
+          >
+            Our Approach
+          </h2>
+          <h3 class="text-xl md:text-2xl lg:text-3xl text-gray-300 mb-8">
+            Independent Minds, Unified Impact
+          </h3>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div
+            class="bg-gray-50 rounded-2xl p-8 shadow-lg border border-gray-200"
+          >
+            <div
+              class="w-16 h-16 bg-purple-600 rounded-2xl flex items-center justify-center mb-6"
+            >
+              <span class="text-3xl">🤝</span>
+            </div>
+            <h4 class="text-xl md:text-2xl font-bold text-black mb-4">
+              Independent Collaboration
+            </h4>
+            <p class="text-gray-600 leading-relaxed">
+              Each team member works independently, bringing their unique
+              expertise and perspective to every project, then we combine our
+              results for maximum impact.
+            </p>
+          </div>
+
+          <div
+            class="bg-gray-50 rounded-2xl p-8 shadow-lg border border-gray-200"
+          >
+            <div
+              class="w-16 h-16 bg-yellow-400 rounded-2xl flex items-center justify-center mb-6"
+            >
+              <span class="text-3xl">🔓</span>
+            </div>
+            <h4 class="text-xl md:text-2xl font-bold text-black mb-4">
+              Open Source First
+            </h4>
+            <p class="text-gray-600 leading-relaxed">
+              We prioritize open source projects and technologies, believing
+              that the best solutions are built in the open, by the community,
+              for the community.
+            </p>
+          </div>
+
+          <div
+            class="bg-gray-50 rounded-2xl p-8 shadow-lg border border-gray-200"
+          >
+            <div
+              class="w-16 h-16 bg-purple-600 rounded-2xl flex items-center justify-center mb-6"
+            >
+              <span class="text-3xl">⚡</span>
+            </div>
+            <h4 class="text-xl md:text-2xl font-bold text-black mb-4">
+              Agile Innovation
+            </h4>
+            <p class="text-gray-600 leading-relaxed">
+              Our distributed model allows for rapid iteration, continuous
+              learning, and the flexibility to adapt to changing project needs
+              in real-time.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Values Section -->
+    <section
+      class="h-screen bg-gray-50 flex flex-col justify-center items-center px-6"
+    >
+      <div class="max-w-6xl w-full">
+        <div class="text-center mb-16">
+          <h2
+            class="text-4xl md:text-5xl lg:text-6xl font-bold text-black mb-6"
+          >
+            Our Values
+          </h2>
+          <h3 class="text-xl md:text-2xl lg:text-3xl text-purple-600 mb-8">
+            "What Drives Us Forward"
+          </h3>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+          <div
+            class="bg-white rounded-2xl p-8 shadow-lg border border-gray-200"
+          >
+            <h4 class="text-2xl md:text-3xl font-bold text-black mb-6">
+              Open Source Commitment
+            </h4>
+            <p class="text-lg text-gray-600 leading-relaxed mb-6">
+              We give priority to open source projects because we believe in the
+              power of collaborative development. Open source software drives
+              innovation, ensures transparency, and creates solutions that
+              benefit everyone.
+            </p>
+            <ul class="text-gray-600 space-y-3">
+              <li class="flex items-center">
+                <span class="w-2 h-2 bg-yellow-400 rounded-full mr-3"></span>
+                Contributing to existing open source projects
+              </li>
+              <li class="flex items-center">
+                <span class="w-2 h-2 bg-yellow-400 rounded-full mr-3"></span>
+                Open sourcing our own innovative solutions
+              </li>
+              <li class="flex items-center">
+                <span class="w-2 h-2 bg-yellow-400 rounded-full mr-3"></span>
+                Supporting the global developer community
+              </li>
+            </ul>
+          </div>
+
+          <div
+            class="bg-white rounded-2xl p-8 shadow-lg border border-gray-200"
+          >
+            <h4 class="text-2xl md:text-3xl font-bold text-black mb-6">
+              Global Perspective
+            </h4>
+            <p class="text-lg text-gray-600 leading-relaxed mb-6">
+              Starting from Hong Kong, we've built a network that spans the
+              globe. This international perspective allows us to understand
+              diverse markets, cultures, and technical challenges.
+            </p>
+            <ul class="text-gray-600 space-y-3">
+              <li class="flex items-center">
+                <span class="w-2 h-2 bg-purple-600 rounded-full mr-3"></span>
+                Cross-cultural collaboration and understanding
+              </li>
+              <li class="flex items-center">
+                <span class="w-2 h-2 bg-purple-600 rounded-full mr-3"></span>
+                24/7 development cycles across time zones
+              </li>
+              <li class="flex items-center">
+                <span class="w-2 h-2 bg-purple-600 rounded-full mr-3"></span>
+                Local market insights and global scalability
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact CTA Section -->
+    <section
+      class="h-screen bg-white flex flex-col justify-center items-center px-6"
+    >
+      <div class="max-w-4xl w-full text-center">
+        <h2 class="text-4xl md:text-5xl lg:text-6xl font-bold text-black mb-6">
+          Join Our Mission
+        </h2>
+        <h3 class="text-xl md:text-2xl lg:text-3xl text-purple-600 mb-8">
+          "Ready to Build Something Amazing Together?"
+        </h3>
+        <p
+          class="text-lg md:text-xl lg:text-2xl text-gray-600 max-w-3xl mx-auto leading-relaxed mb-12"
+        >
+          Whether you're looking to collaborate on an open source project, need
+          custom software development, or want to join our global team of
+          independent professionals, we'd love to hear from you.
+        </p>
+
+        <div
+          class="flex flex-col sm:flex-row gap-6 justify-center items-center"
+        >
+          <a
+            href="/contact"
+            class="bg-purple-600 hover:bg-purple-700 text-white px-8 py-4 rounded-2xl font-semibold text-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
+          >
+            Get in Touch
+          </a>
+          <a
+            href="https://github.com"
+            target="_blank"
+            class="bg-transparent hover:bg-purple-600 text-purple-600 hover:text-white border-2 border-purple-600 px-8 py-4 rounded-2xl font-semibold text-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
+          >
+            View Our Projects
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</MainLayout>
+
+<html lang="en">
+  <head>
+    <BaseHead title={`About - ${SITE_TITLE}`} description={SITE_DESCRIPTION} />
+  </head>
+  <body> </body>
+</html>
