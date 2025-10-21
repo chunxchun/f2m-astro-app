@@ -12,7 +12,7 @@ const isActive = href === pathname || href === '/' + (subpath?.[0] || '');
 <a href={href} class:list={[className, { active: isActive }]} {...props}>
 	<span class="group relative inline-block text-xl font-medium">
 		<slot />
-		<span class="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-yellow-400"></span>
+		<!-- <span class="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-yellow-300"></span> -->
 	</span>
 </a>
 <style>
